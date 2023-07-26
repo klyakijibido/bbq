@@ -5,6 +5,8 @@
 
 yarn add bootstrap@4.6.2 jquery popper.js
 
+"bootstrap": "4.6.2" добавлен через webpacker
+в уроке     twitter-bootstrap-rails (3.2.2)
 
 Things you may want to cover:
 
