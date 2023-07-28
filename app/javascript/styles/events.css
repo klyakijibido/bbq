@@ -3,6 +3,11 @@
 Наши дополнительные стили для красивого оформления плитки событий
  */
 
+/*Э: лучше всё же использовать*/
+.background-event-thumb {
+  background-image: url("~images/event_thumb.jpg");
+}
+
 .event-info {
   position: relative;
   color: white;
