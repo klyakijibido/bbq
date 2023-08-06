@@ -37,18 +37,15 @@
     <div class="container">
       <div class="row">
         <div class="col-md-9">
-<!--          <div class="alert alert-success">-->
-            <%#= flash[:success] %>
-<!--          </div>-->
-<!--          <div class="alert alert-info">-->
-            <%#= flash[:info] %>
-<!--          </div>-->
-<!--          <div class="alert alert-warning">-->
-            <%#= flash[:warning] %>
-<!--          </div>-->
-<!--          <div class="alert alert-danger">-->
-            <%#= flash[:danger] %>
-<!--          </div>-->
+          <% if flash[:notice].present? %>
+            <div class="alert alert-success">
+              <%= flash[:notice] %>
+            </div>
+          <% elsif flash[:alert].present?%>
+            <div class="alert alert-warning">
+              <%= flash[:alert] %>
+            </div>
+          <% end %>
 
           <%= yield %>
 
