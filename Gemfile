@@ -8,6 +8,7 @@ gem 'devise'
 gem 'sqlite3', '~> 1.4'
 gem 'puma', '~> 5.0'
 gem 'webpacker', '~> 5.0'
+gem 'rails-i18n', '~> 6.x'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
