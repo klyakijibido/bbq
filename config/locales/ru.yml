@@ -28,3 +28,5 @@ ru:
     one: '%{count} ошибка'
     few: '%{count} ошибки'
     many: '%{count} ошибок'
+  confirms:
+    delete: 'Точно удалить событие?'
