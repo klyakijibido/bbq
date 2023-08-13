@@ -1,0 +1,33 @@
+<h2 class='my-4'>Вход</h2>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= render 'devise/shared/error_messages', resource: resource %>
+
+  <form>
+    <div class='form-group'>
+      <label for='user_email'><%= t('activerecord.attributes.user.email') %></label>
+      <%= f.email_field :email, class: 'form-control', autofocus: true, autocomplete: 'email', id: 'user_email',
+                        placeholder: t('activerecord.attributes.user.email') %>
+    </div>
+    <div class='form-group'>
+      <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br/>
+      <label for='user_password'><%= t('activerecord.attributes.user.password') %></label>
+      <%= f.password_field :password, class: 'form-control', autocomplete: 'current-password', id: 'user-password',
+                           placeholder: t('activerecord.attributes.user.password')  %>
+    </div>
+    <% if devise_mapping.rememberable? %>
+      <div class='form-group form-check'>
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me, class: 'form-check-label' %>
+      </div>
+    <% end %>
+    <div class='actions'>
+      <%= f.submit t('controllers.device.log_in'), class: 'btn btn-primary' %>
+    </div>
+    <div class='form-group mt-4'>
+      <%= render 'devise/shared/links' %>
+    </div>
+  </form>
+<% end %>
+

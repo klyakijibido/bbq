@@ -5,7 +5,7 @@ ru:
       event: 'Событие'
     attributes:
       user:
-        email: 'Электропочта'
+        email: 'Email'
         name: 'Имя'
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
@@ -21,9 +21,12 @@ ru:
       destroyed: 'Событие удалено успешно'
     users:
       updated: 'Данные пользователя обновлены успешно'
+    device:
+      sign_up: 'Зарегестрироваться'
+      log_in: 'Войти'
   app:
     name: 'Шашлыки'
-    company: 'Хороший программист'
+    company: 'klyakijibido'
   error:
     one: '%{count} ошибка'
     few: '%{count} ошибки'
