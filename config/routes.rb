@@ -4,5 +4,7 @@ Rails.application.routes.draw do
 
   resources :users, only: %i[show edit update]
 
-  resources :events
+  resources :events do
+    resources :comments, only: [:create, :destroy]
+  end
 end

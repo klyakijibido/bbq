@@ -24,6 +24,10 @@ ru:
     device:
       sign_up: 'Зарегестрироваться'
       log_in: 'Войти'
+    comment:
+      created: 'Коммент добавлен'
+      destroyed: 'Коммент удален'
+      error: 'Ошибка с комментом'
   app:
     name: 'Шашлыки'
     company: 'klyakijibido'
@@ -33,3 +37,7 @@ ru:
     many: '%{count} ошибок'
   confirms:
     delete: 'Точно удалить событие?'
+
+  comments:
+    comment:
+      destroy_confirm: 'Вы уверены, что хотите удалить этот комментарий?'
