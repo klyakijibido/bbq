@@ -4,6 +4,7 @@ class User < ApplicationRecord
   # юзер может создавать много событий
   has_many :events
   has_many :comments, dependent: :destroy
+  has_many :subscriptions
 
   validates :name, presence: true, length: {maximum: 35}
 
