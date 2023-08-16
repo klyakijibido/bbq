@@ -4,7 +4,6 @@ class CommentsController < ApplicationController
 
   # POST /comments
   def create
-    debugger
     @new_comment = @event.comments.build(comment_params)
     @new_comment.user = current_user
 

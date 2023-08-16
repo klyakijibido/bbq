@@ -28,6 +28,11 @@ ru:
       created: 'Коммент добавлен'
       destroyed: 'Коммент удален'
       error: 'Ошибка с комментом'
+    subscription:
+      created: 'Вы подписаны на это событие'
+      destroyed: 'Участник отписан'
+      error: 'Подписка/отписка не сработала'
+
   app:
     name: 'Шашлыки'
     company: 'klyakijibido'
