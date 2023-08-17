@@ -30,8 +30,11 @@
   <div class="row">
     <div class="col-md-8">
       <div class="event-comments buffer-top">
+
+        <%= render partial: 'comments/form', locals: {comment: @new_comment || @event.comments.build} %>
+
         <div class="buffer-both">
-          <%= render partial: 'comments/comment', collection: @event.comments %>
+          <%= render partial: 'comments/comment', collection: @event.comments.except(@new_comment) %>
         </div>
       </div>
     </div>
@@ -40,7 +43,7 @@
         <h4>Зовет:</h4>
         <p><%= render partial: 'users/user', object: @event.user %></p>
       </div>
-      <div class="event-subscribtions">
+      <div class="event-subscriptions">
         <h4>Пойдут:</h4>
         <div>
           <p>
@@ -49,9 +52,11 @@
           </p>
         </div>
       </div>
-      <div class="event-suvscribtion-form">
+      <div class="event-subscription-form">
         <h4>Я пойду:</h4>
-
+        <div>
+          <%= render partial: 'subscriptions/form', locals: {subscription: @new_subscription || @event.subscriptions.build} %>
+        </div>
       </div>
     </div>
   </div>
