@@ -11,6 +11,8 @@ class Subscription < ApplicationRecord
   validates :user, uniqueness: {scope: :event_id}, if: -> { user.present? }
   validates :user_email, uniqueness: {scope: :event_id}, unless: -> { user.present? }
 
+  validate :prohibition_anonymous_use_registered_email
+
   def user_name
     if user.present?
       user.name
@@ -25,5 +27,11 @@ class Subscription < ApplicationRecord
     else
       super
     end
+  end
+
+  private
+
+  def prohibition_anonymous_use_registered_email
+    errors.add(:user_email, I18n.t('activerecord.errors.models.subscribtion.user_email.registered') ) if User.exists?(email: user_email)
   end
 end
