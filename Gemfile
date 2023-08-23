@@ -10,6 +10,8 @@ gem 'puma', '~> 5.0'
 gem 'webpacker', '~> 5.0'
 gem 'rails-i18n', '~> 6.x'
 gem 'devise-i18n'
+gem 'carrierwave', '~> 3.0'
+gem 'rmagick'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
