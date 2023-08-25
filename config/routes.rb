@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :photos, only: [:create, :destroy]
   # devise_for :users
   devise_for :users, controllers: { registrations: 'registrations' }
   root 'events#index'
