@@ -10,6 +10,7 @@ gem 'puma', '~> 5.0'
 gem 'webpacker', '~> 5.0'
 gem 'rails-i18n', '~> 6.x'
 gem 'devise-i18n'
+gem 'image_processing', '>= 1.2'
 gem 'carrierwave', '~> 3.0'
 gem 'rmagick'
 

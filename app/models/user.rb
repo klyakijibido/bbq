@@ -13,7 +13,8 @@ class User < ApplicationRecord
 
   after_commit :link_subscription, on: :create
 
-  mount_uploader :avatar, AvatarUploader
+  # mount_uploader :avatar, AvatarUploader
+  has_one_attached :avatar
 
   private
 

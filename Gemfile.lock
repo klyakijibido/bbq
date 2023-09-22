@@ -118,6 +118,8 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.15.3-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.15.3-x86_64-linux)
+      racc (~> 1.4)
     orm_adapter (0.5.0)
     pkg-config (1.5.2)
     public_suffix (5.0.3)
@@ -177,6 +179,7 @@ GEM
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     sqlite3 (1.6.3-x86_64-darwin)
+    sqlite3 (1.6.3-x86_64-linux)
     ssrf_filter (1.1.1)
     thor (1.2.2)
     timeout (0.4.0)
@@ -201,12 +204,14 @@ GEM
 
 PLATFORMS
   x86_64-darwin-17
+  x86_64-linux
 
 DEPENDENCIES
   byebug
   carrierwave (~> 3.0)
   devise
   devise-i18n
+  image_processing (>= 1.2)
   puma (~> 5.0)
   rails (~> 6.1.7, >= 6.1.7.4)
   rails-i18n (~> 6.x)
