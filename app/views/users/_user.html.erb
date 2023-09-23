@@ -1,6 +1,11 @@
 <span class="user">
   <span class="user-avatar">
-    <%= image_tag(user_avatar(user), class: 'img-icon') %>
+    <% if user.avatar.attached? %>
+      <div class="my-2">
+        <%= image_tag user.avatar %>
+      </div>
+    <% end %>
+    <%#= image_tag(user_avatar(user), class: 'img-icon') %>
   </span>
   <span class="user-name">
     <% if request.path == user_path(user) %>

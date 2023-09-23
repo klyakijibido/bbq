@@ -1,6 +1,10 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
 
+  has_one_attached :avatar do |attachable|
+    attachable.variant(resize: "100x100")
+  end
+
   # юзер может создавать много событий
   has_many :events
   has_many :comments, dependent: :destroy
@@ -14,7 +18,6 @@ class User < ApplicationRecord
   after_commit :link_subscription, on: :create
 
   # mount_uploader :avatar, AvatarUploader
-  has_one_attached :avatar
 
   private
 
