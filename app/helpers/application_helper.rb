@@ -22,9 +22,9 @@ module ApplicationHelper
     photos = event.photos.persisted
 
     if photos.any?
-      photos.sample.photo.url
+      url_for(photos.sample.photo)
     else
-      asset_path('event.jpg')
+      asset_pack_path('media/images/event.jpg')
     end
   end
 
@@ -32,9 +32,12 @@ module ApplicationHelper
     photos = event.photos.persisted
 
     if photos.any?
-      photos.sample.photo.thumb.url
+      # photos.sample.photo.thumb.url
+      photos.sample.photo.variant(resize: "100x100")
+      # # user.avatar.variant(:thumb)
+      # user.avatar.variant(resize: "100x100")
     else
-      asset_path('event_thumb.jpg')
+      asset_pack_path('media/images/event_thumb.jpg')
     end
   end
 

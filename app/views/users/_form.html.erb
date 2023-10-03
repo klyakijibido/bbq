@@ -14,10 +14,8 @@
 
   <div class="form_group">
     <%= f.label :avatar %>
+    <p><%= image_tag(@user.avatar) if @user.avatar.attached? %></p>
     <%= f.file_field :avatar, class: 'form-control' %>
-    <%#= f.label :avatar %>
-<!--    <p><%#= image_tag(@user.avatar.thumb.url) if @user.avatar? %></p>-->
-    <%#= f.file_field :avatar %>
   </div>
 
   <div class="actions mt-3">
