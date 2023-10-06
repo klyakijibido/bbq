@@ -12,7 +12,8 @@ module ApplicationHelper
   def user_avatar_thumb(user)
     if user.avatar.attached?
       # user.avatar.variant(:thumb)
-      user.avatar.variant(resize: "100x100")
+      # user.avatar.variant(resize: "100x100")
+      user.avatar.variant(resize_to_fit: [100, 100])
     else
       asset_pack_path('media/images/user.png')
     end
