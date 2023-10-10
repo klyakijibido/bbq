@@ -4,7 +4,7 @@ class User < ApplicationRecord
   has_one_attached :avatar
 
   # юзер может создавать много событий
-  has_many :events
+  has_many :events, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :subscriptions
 
